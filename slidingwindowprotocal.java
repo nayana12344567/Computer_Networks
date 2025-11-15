@@ -33,25 +33,12 @@ package slidingwindowprotocol;
          private boolean receiveAck(int frame){ 
              System.out.println("Receiving ack for frame:"+frame); 
              return true; 
-         } 
-         private int receiveCumulativeAck(int lastFrameSent) { 
-     int cumulativeAck = lastFrameSent + 1; 
-     System.out.println("Receiving ack" + cumulativeAck); 
-     return cumulativeAck; 
- } 
-  
-  
+         }
  public static void main(String[] args){ 
  int windowSize=6; 
  int frameCount=10; 
  SlidingWindowProtocol swp=new SlidingWindowProtocol(windowSize,frameCount); 
- if(windowSize<=(frameCount/2)){ 
-   swp.sendFrames();   
- } 
- else{ 
-     System.out.print("error"); 
- } 
- } 
+ }
  } 
   
  //1.need to check size of the window less than are equal to half of the window frame. windowsize<=1/2 framecount,5<=10 
