@@ -17,7 +17,7 @@ public class BellmanDemoFinal {
                 w[i][j] = in.nextInt();
                 if (w[i][j] != 0) {
                     edge[E][0] = i;
-                    edge[E][1] = j;
+                    edge[E++][1] = j;
                 }
             }
 
