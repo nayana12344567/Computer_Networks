@@ -37,7 +37,8 @@ package slidingwindowprotocol;
  public static void main(String[] args){ 
  int windowSize=6; 
  int frameCount=10; 
- SlidingWindowProtocol swp=new SlidingWindowProtocol(windowSize,frameCount); 
+ SlidingWindowProtocol swp=new SlidingWindowProtocol(windowSize,frameCount);
+swp.sendFrames();
  }
  } 
   
